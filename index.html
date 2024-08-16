@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <label class="dark-mode-switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider"></span>
+        </label>
+        <div class="converter">
+            <label for="celsius">Celsius:</label>
+            <input type="number" id="celsius" placeholder="Celsius">
+            <button onclick="convertFromCelsius()">Convert</button>
+        </div>
+        <div class="converter">
+            <label for="fahrenheit">Fahrenheit:</label>
+            <input type="number" id="fahrenheit" placeholder="Fahrenheit">
+            <button onclick="convertFromFahrenheit()">Convert</button>
+        </div>
+        <div class="converter">
+            <label for="kelvin">Kelvin:</label>
+            <input type="number" id="kelvin" placeholder="Kelvin">
+            <button onclick="convertFromKelvin()">Convert</button>
+        </div>
+        <div class="results">
+            <p id="resultCelsius"></p>
+            <p id="resultFahrenheit"></p>
+            <p id="resultKelvin"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.dark-mode-switch {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dark-mode-switch input {
+    display: none;
+}
+
+.dark-mode-switch .slider {
+    cursor: pointer;
+    width: 34px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 20px;
+    position: relative;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.dark-mode-switch .slider:before {
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: transform 0.3s;
+}
+
+.dark-mode-switch input:checked + .slider {
+    background-color: #007bff;
+}
+
+.dark-mode-switch input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+.converter {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #555;
+    transition: color 0.3s;
+}
+
+input {
+    padding: 12px;
+    margin-left: 10px;
+    width: 120px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.results {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333;
+}
+
+.container.dark-mode {
+    background-color: #444;
+    color: #ddd;
+}
+
+label.dark-mode {
+    color: #ddd;
+}
+
+input.dark-mode {
+    border-color: #666;
+    color: #ddd;
+}
+
+button.dark-mode {
+    background-color: #0056b3;
+}
+
+.results.dark-mode {
+    color: #ddd;
+}
